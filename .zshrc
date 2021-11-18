@@ -169,6 +169,7 @@ function MACBREW_INSTALL_PACKAGE {
 alias vi='nvim'
 alias vim='nvim'
 alias reddit='tuir'
+alias fzbat="fzf --preview 'bat --style=numbers --color=always {}'"
 
 
 FZF_TAB_GROUP_COLORS=(
