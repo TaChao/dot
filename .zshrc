@@ -157,8 +157,10 @@ function MACBREW_INSTALL_PACKAGE {
   if read -q "choice?Press Y/y to continue with 'Init Brew Environment': "; then
     brew install fzf tmux wget ctags neovim go python bpytop rustup axel p7zip aria2 lynx pandoc
     brew install fish xxh kubectl lolcat cowsay mc youtube-dl rbenv iproute2mac weechat subversion
-    brew install emacs-plus@28 --with-spacemacs-icon
     brew install global multitail lnav grc exa fd neofetch bazel stormssh bat
+    brew install --cask oracle-jdk
+    brew tap d12frosted/emacs-plus
+    brew install emacs-plus@28 --with-spacemacs-icon
   else
     echo
     echo "exit"
