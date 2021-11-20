@@ -172,6 +172,7 @@ function FEDORA_INSTALL_BASE {
     sudo dnf install neovim tmux zsh fzf bat emacs ruby ruby-devel pigz p7zip axel aria2 fd-find
     sudo dnf install g++ llvm
     sudo dnf module install nodejs:16/default
+    sudo dnf install papirus-icon-theme gnome-tweak-tool 
 }
 
 alias vi='nvim'
