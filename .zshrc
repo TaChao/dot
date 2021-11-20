@@ -167,6 +167,12 @@ function MACBREW_INSTALL_PACKAGE {
   fi
 
 }
+function FEDORA_INSTALL_BASE {
+    sudo dnf groupinstall "Development Tools" "Development Libraries"
+    sudo dnf install neovim tmux zsh fzf bat emacs ruby ruby-devel pigz p7zip axel aria2 
+    sudo dnf install g++ llvm
+    sudo dnf module install nodejs:16/default
+}
 
 alias vi='nvim'
 alias vim='nvim'
