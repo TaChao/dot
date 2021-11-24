@@ -186,8 +186,7 @@ function FEDORA_INSTALL_BASE {
 function UBUNTU_INSTALL_BASE {
     sudo apt install -y neovim tmux zsh fzf bat emacs ruby ruby-dev pigz p7zip axel aria2 fd-find build-essential 
 }
-alias vi='nvim'
-alias vim='nvim'
+
 alias reddit='tuir'
 alias fzbat="fzf --preview 'bat --style=numbers --color=always {}'"
 
