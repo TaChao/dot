@@ -177,13 +177,15 @@ function install emacspace {
 }
 
 function FEDORA_INSTALL_BASE {
-    sudo dnf groupinstall "Development Tools" "Development Libraries"
-    sudo dnf install neovim tmux zsh fzf bat emacs ruby ruby-devel pigz p7zip axel aria2 fd-find
-    sudo dnf install g++ llvm
-    sudo dnf module install nodejs:16/default
-    sudo dnf install papirus-icon-theme gnome-tweak-tool 
+    sudo dnf groupinstall -y "Development Tools" "Development Libraries"
+    sudo dnf install -y neovim tmux zsh fzf bat emacs ruby ruby-devel pigz p7zip axel aria2 fd-find
+    sudo dnf install -y g++ llvm
+    sudo dnf module install -y nodejs:16/default
+    sudo dnf install -y papirus-icon-theme gnome-tweak-tool 
 }
-
+function UBUNTU_INSTALL_BASE {
+    sudo apt install -y neovim tmux zsh fzf bat emacs ruby ruby-dev pigz p7zip axel aria2 fd-find build-essential 
+}
 alias vi='nvim'
 alias vim='nvim'
 alias reddit='tuir'
