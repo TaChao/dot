@@ -203,7 +203,7 @@ zstyle ':completion:*:descriptions' format '[%d]'
 function reset_license {
      rm -rf ~/Library/Preferences/SmartSVN
 }
-export PATH="/usr/local/sbin:$PATH"
+export PATH="/usr/local/sbin:$PATH:$HOME/.local/bin"
 
 export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --color=always --exclude .git'
 export FZF_DEFAULT_OPTS="--ansi"
