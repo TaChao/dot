@@ -167,6 +167,15 @@ function MACBREW_INSTALL_PACKAGE {
   fi
 
 }
+
+function install_spacevim {
+    curl -sLf https://spacevim.org/install.sh | bash
+}
+
+function install emacspace {
+    git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+}
+
 function FEDORA_INSTALL_BASE {
     sudo dnf groupinstall "Development Tools" "Development Libraries"
     sudo dnf install neovim tmux zsh fzf bat emacs ruby ruby-devel pigz p7zip axel aria2 fd-find
