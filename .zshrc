@@ -184,7 +184,7 @@ function FEDORA_INSTALL_BASE {
     sudo dnf install -y papirus-icon-theme gnome-tweak-tool 
 }
 function UBUNTU_INSTALL_BASE {
-    sudo apt install -y neovim tmux zsh fzf bat emacs ruby ruby-dev pigz p7zip axel aria2 fd-find build-essential 
+    sudo apt install -y neovim tmux zsh fzf bat emacs ruby ruby-dev pigz p7zip axel aria2 fd-find build-essential vim-nox
 }
 
 alias reddit='tuir'
