@@ -181,7 +181,7 @@ function FEDORA_INSTALL_BASE {
     sudo dnf install -y neovim tmux zsh fzf bat emacs ruby ruby-devel pigz p7zip axel aria2 fd-find
     sudo dnf install -y g++ llvm
     sudo dnf module install -y nodejs:16/default
-    sudo dnf install -y papirus-icon-theme gnome-tweak-tool 
+    sudo dnf install -y papirus-icon-theme gnome-tweak-tool xl2tpd NetworkManager-l2tp NetworkManager-l2tp-gnome
 }
 function UBUNTU_INSTALL_BASE {
     sudo apt install -y neovim tmux zsh fzf bat emacs ruby ruby-dev pigz p7zip axel aria2 fd-find build-essential vim-nox
