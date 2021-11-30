@@ -190,10 +190,15 @@ function FEDORA_INSTALL_BASE {
     sudo dnf module install -y nodejs:16/default
     sudo dnf install -y papirus-icon-theme gnome-tweak-tool xl2tpd NetworkManager-l2tp NetworkManager-l2tp-gnome
 }
+
 function UBUNTU_INSTALL_BASE {
     sudo apt install -y neovim tmux zsh fzf bat emacs ruby ruby-dev pigz p7zip axel aria2 fd-find build-essential vim-nox
 }
 
+function wsl2_x11_enable {
+    export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
+    export LIBGL_ALWAYS_INDIRECT=1
+}
 alias reddit='tuir'
 alias fzbat="fzf --preview 'bat --style=numbers --color=always {}'"
 
