@@ -172,8 +172,15 @@ function install_spacevim {
     curl -sLf https://spacevim.org/install.sh | bash
 }
 
-function install emacspace {
+function install_emacspace {
     git clone https://github.com/syl20bnr/spacemacs ~/.emacs.d
+}
+
+function install_tmux {
+    cd
+    git clone https://github.com/gpakosz/.tmux.git
+    ln -s -f .tmux/.tmux.conf
+    cp .tmux/.tmux.conf.local .
 }
 
 function FEDORA_INSTALL_BASE {
