@@ -192,7 +192,7 @@ function FEDORA_INSTALL_BASE {
 }
 
 function UBUNTU_INSTALL_BASE {
-    sudo apt install -y neovim tmux zsh fzf bat emacs ruby ruby-dev pigz p7zip axel aria2 fd-find build-essential vim-nox
+    sudo apt install -y neovim tmux zsh fzf bat emacs ruby ruby-dev pigz p7zip axel aria2 fd-find build-essential vim-nox python3-pip
 }
 
 function wsl2_x11_enable {
