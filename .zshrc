@@ -168,6 +168,10 @@ function MACBREW_INSTALL_PACKAGE {
 
 }
 
+function gh_latest_version {
+    curl --silent "https://api.github.com/repos/$1/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
+}
+
 function install_spacevim {
     curl -sLf https://spacevim.org/install.sh | bash
 }
@@ -223,10 +227,6 @@ zstyle ':completion:*:descriptions' format '[%d]'
 
 function reset_license {
      rm -rf ~/Library/Preferences/SmartSVN
-}
-
-function gh_latest_version {
-    curl --silent "https://api.github.com/repos/$1/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 }
 
 export PATH="/usr/local/sbin:$PATH:$HOME/.local/bin"
