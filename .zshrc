@@ -200,13 +200,13 @@ function UBUNTU_INSTALL_BASE {
 }
 
 function INSTALL_GH_DOWNLOADER {
-    GHRDVER=$(gh_latest_version zero88/gh-release-downloader)
-    sudo curl -L https://github.com/zero88/gh-release-downloader/releases/download/v$GHRDVER/ghrd -o /usr/local/bin/ghrd
-    sudo chmod +x /usr/local/bin/ghrd
     sudo rm /usr/bin/ghrd
+    sudo rm /usr/local/bin/ghrd
+    GHRDVER=$(gh_latest_version zero88/gh-release-downloader)
+    sudo curl -L https://github.com/zero88/gh-release-downloader/releases/download/$GHRDVER/ghrd -o /usr/local/bin/ghrd
+    sudo chmod +x /usr/local/bin/ghrd
     sudo ln -s /usr/local/bin/ghrd /usr/bin/ghrd
     sudo apt install jq -y
-
 }
 
 function wsl2_x11_enable {
