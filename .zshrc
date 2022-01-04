@@ -214,6 +214,11 @@ zstyle ':completion:*:descriptions' format '[%d]'
 function reset_license {
      rm -rf ~/Library/Preferences/SmartSVN
 }
+
+function gh_latest_version {
+    curl --silent "https://api.github.com/repos/$1/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
+}
+
 export PATH="/usr/local/sbin:$PATH:$HOME/.local/bin"
 
 export FZF_DEFAULT_COMMAND='fd --type file --follow --hidden --color=always --exclude .git'
