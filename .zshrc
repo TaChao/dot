@@ -172,6 +172,10 @@ function gh_latest_version {
     curl --silent "https://api.github.com/repos/$1/releases/latest" | grep '"tag_name":' | sed -E 's/.*"([^"]+)".*/\1/'
 }
 
+function gh_latest_version_binaries () {
+    curl --silent "https://api.github.com/repos/$1/releases/latest" | grep browser_download_url | cut -d '"' -f 4
+}
+
 function install_spacevim {
     curl -sLf https://spacevim.org/install.sh | bash
 }
