@@ -195,6 +195,16 @@ function UBUNTU_INSTALL_BASE {
     sudo apt install -y neovim tmux zsh fzf bat emacs ruby ruby-dev pigz p7zip axel aria2 fd-find build-essential vim-nox python3-pip
 }
 
+function INSTALL_GH_DOWNLOADER {
+    GHRDVER=$(gh_latest_version zero88/gh-release-downloader)
+    sudo curl -L https://github.com/zero88/gh-release-downloader/releases/download/v$GHRDVER/ghrd -o /usr/local/bin/ghrd
+    sudo chmod +x /usr/local/bin/ghrd
+    sudo rm /usr/bin/ghrd
+    sudo ln -s /usr/local/bin/ghrd /usr/bin/ghrd
+    sudo apt install jq -y
+
+}
+
 function wsl2_x11_enable {
     export DISPLAY=$(awk '/nameserver / {print $2; exit}' /etc/resolv.conf 2>/dev/null):0
     export LIBGL_ALWAYS_INDIRECT=1
