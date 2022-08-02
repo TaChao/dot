@@ -106,6 +106,14 @@ function cmd_proxy {
    export https_proxy=$1
 }
 
+function Gogh {
+    bash -c "$(wget -qO- https://raw.githubusercontent.com/Mayccoll/Gogh/master/gogh.sh)"
+}
+
+function Gogh_osx {
+    bash -c "$(curl -sLo- https://raw.githubusercontent.com/Mayccoll/Gogh/master/gogh.sh)"
+}
+
 function sconda {
    # >>> conda initialize >>>
    # !! Contents within this block are managed by 'conda init' !!
