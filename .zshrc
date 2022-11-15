@@ -38,7 +38,9 @@ antigen bundle nmap
 antigen bundle rsync
 antigen bundle golang
 antigen bundle macos
+# Other tools
 antigen bundle history-substring-search
+antigen bundle soimort/translate-shell@develop
 
 antigen bundle zsh-users/zsh-autosuggestions
 antigen bundle zsh-users/zsh-completions
